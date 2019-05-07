@@ -18,4 +18,4 @@ class StandAloneTests(TestCase):
     @patch('__builtin__.open')
     def test_login_error(self, mock_open):
         mock_open.side_effect=IOError()
-        self.assertTrue(auth.login('netease', 'password'))
+        self.assertFalse(auth.login('netease', 'password'))
