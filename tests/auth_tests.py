@@ -13,7 +13,7 @@ class StandAloneTests(TestCase):
     @patch('__builtin__.open')
     def test_login_bad_creds(self,mock_open):
         mock_open.return_value.read.return_value = "netease|password"
-        self.assertTrue(auth.login('netease1', 'password'))
+        self.assertFalse(auth.login('netease1', 'password'))
 
     @patch('__builtin__.open')
     def test_login_error(self, mock_open):
