@@ -1,4 +1,4 @@
-
+# -*- coding: utf-8 -*-
 def login(username,password):
     try:
         user_file=open('/etc/users.txt')
@@ -12,5 +12,5 @@ def login(username,password):
         print "I can't authenticate you."
         return False
 def logout():
-    print '这一行不会被测试用例覆盖到'
-    print '这一行不会被测试用例覆盖到，too'
+    print 'The line can\'t be over test case!'
+    print 'The line can\'t be over test case锛宼oo!'
